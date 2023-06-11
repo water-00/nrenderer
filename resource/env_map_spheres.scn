@@ -1,0 +1,36 @@
+Begin Material
+
+Material White
+
+Prop diffuseColor RGB 0.725 0.71 0.68
+
+Material Glass 2
+
+Prop absorbed RGB 1 1 1 
+Prop ior Float 1.5
+
+End
+
+Begin Model
+
+Model Sphere
+Translation -100 0 800
+
+Sphere Sphere Glass
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+
+Model Sphere
+Translation 100 0 800
+
+Sphere Sphere White
+N 0 0 1
+P 0 0 0
+R 50
+
+End

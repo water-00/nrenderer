@@ -1,0 +1,157 @@
+
+Begin Material
+
+Material White
+
+Prop diffuseColor RGB 0.725 0.71 0.68
+
+Material Red
+
+Prop diffuseColor RGB 0.63 0.065, 0.05
+
+Material Green
+
+Prop diffuseColor RGB 0.14 0.45 0.091
+
+Material Gold 1
+
+Prop eta_r Vec3 0.142 0.374 1.439
+Prop eta_i Vec3 3.974 2.380 1.599
+Prop albedo RGB 1 0.843 0
+
+End
+
+Begin Model
+
+Model Wall
+Translation 0.0 0.0 1028.0
+Plane LeftWall Red
+N  -1.0 0.0 0.0
+P 278.0 278.0 278.0
+U 0 -556.0 0
+V 0 0 -556.0
+
+Plane RightWall Green
+N 1.0 0.0 0.0
+P -278.0 278.0 278
+U 0 -556 0
+V 0 0 -556.0
+
+Plane TopWall White
+N 0.0 -1.0 0.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BottomWall White
+N 0.0 1.0 0.0
+P 278.0 -278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BackWall White
+N 0.0 0.0 -1.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 -556 0
+
+End
+
+Begin Model
+
+Model Sphere
+Translation -100 -228 800
+
+Sphere Sphere Gold
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+Model Box
+Translation -100 -178 1150
+
+Plane BoxPlane1 White
+N 0 1 0
+P 100 100 0
+U -100 0 100
+V -100 0 -100
+
+Plane BoxPlane2 White
+N 0 -1 0
+P 100 -100 0
+U -100 0 100
+V -100 0 -100
+
+Plane BoxPlane3 White
+N 0.7071 0 -0.7071
+P 100 -100 0
+U 0 200 0
+V -100 0 -100
+
+Plane BoxPlane4 White
+N 0.7071 0 0.7071
+P 100 -100 0
+U 0 200 0
+V -100 0 100
+
+Plane BoxPlane5 White
+N -0.7071 0 0.7071
+P -100 -100 0
+U 0 200 0
+V 100 0 100
+
+Plane BoxPlane6 White
+N -0.7071 0 -0.7071
+P -100 -100 0
+U 0 200 0
+V 100 0 -100
+
+End
+
+Begin Model
+
+Model Pyramid
+Translation 150 -78 900
+
+Triangle Bottom White
+N 0 1 0
+V1 -50 -200 50
+V2 50 -200 50
+V3 0 -200 -50
+
+Triangle T1 White
+N -0.891953 0.0743294 -0.445977
+V1 -50 -200 50
+V2 0 -200 -50
+V3 0 100 0
+
+Triangle T2 White
+N 0.891953 0.0743294 -0.445977
+V1 0 -200 -50
+V2 50 -200 50
+V3 0 100 0
+
+Triangle T3 White
+N 0 0.164399 0.986394
+V1 -50 -200 50
+V2 50 -200 50
+V3 0 100 0
+
+End
+
+Begin Light
+
+Area TopLight
+# Intensity , radiance or irradiance Value
+IRV 47.8384 38.5664 31.0808
+# Position
+P 60 275 1088
+# U axis
+U -120 0 0
+# V axis
+V 0 0 -120
+
+End

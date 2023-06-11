@@ -1,0 +1,79 @@
+
+Begin Material
+
+Material White
+
+Prop diffuseColor RGB 0.725 0.71 0.68
+
+Material Red
+
+Prop diffuseColor RGB 0.63 0.065, 0.05
+
+Material Green
+
+Prop diffuseColor RGB 0.14 0.45 0.091
+
+
+End
+
+Begin Model
+
+Model Wall
+Translation 0.0 0.0 1028.0
+Plane LeftWall Red
+N  -1.0 0.0 0.0
+P 278.0 278.0 278.0
+U 0 -556.0 0
+V 0 0 -556.0
+
+Plane RightWall Green
+N 1.0 0.0 0.0
+P -278.0 278.0 278
+U 0 -556 0
+V 0 0 -556.0
+
+Plane TopWall White
+N 0.0 -1.0 0.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BottomWall White
+N 0.0 1.0 0.0
+P 278.0 -278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BackWall White
+N 0.0 0.0 -1.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 -556 0
+
+End
+
+Begin Model
+
+Model Sphere
+Translation -25 -100 850
+
+Sphere Sphere White
+N 0 0 1
+P 0 0 0
+R 100
+
+End
+
+Begin Light
+
+Area TopLight
+# Intensity , radiance or irradiance Value
+IRV 47.8384 38.5664 31.0808
+# Position
+P 60 275 1088
+# U axis
+U -120 0 0
+# V axis
+V 0 0 -120
+
+End

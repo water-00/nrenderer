@@ -1,0 +1,110 @@
+
+Begin Material
+
+Material White
+
+Prop diffuseColor RGB 0.73 0.73 0.73
+
+Material Red
+
+Prop diffuseColor RGB 0.65 0.05, 0.05
+
+Material Green
+
+Prop diffuseColor RGB 0.12 0.45 0.15
+
+Material Phong 1
+Prop diffuseColor RGB 0.3 0.4 0.5
+Prop specularColor RGB 1 1 1
+Prop specularEx Float 10
+
+End
+
+Begin Model
+
+Model Wall
+Translation 0.0 0.0 1028.0
+Plane LeftWall Red
+N  -1.0 0.0 0.0
+P 278.0 278.0 278.0
+U 0 -556.0 0
+V 0 0 -556.0
+
+Plane RightWall Green
+N 1.0 0.0 0.0
+P -278.0 278.0 278
+U 0 -556 0
+V 0 0 -556.0
+
+Plane TopWall White
+N 0.0 -1.0 0.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BottomWall White
+N 0.0 1.0 0.0
+P 278.0 -278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BackWall White
+N 0.0 0.0 -1.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 -556 0
+
+End
+
+Begin Model
+
+Model Sphere
+Translation -100 -228 1100
+
+Sphere Sphere Phong
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+
+Model Pyramid
+Translation 150 -78 900
+
+Triangle Bottom White
+N 0 1 0
+V1 -50 -200 50
+V2 50 -200 50
+V3 0 -200 -50
+
+Triangle T1 White
+N -0.891953 0.0743294 -0.445977
+V1 -50 -200 50
+V2 0 -200 -50
+V3 0 100 0
+
+Triangle T2 White
+N 0.891953 0.0743294 -0.445977
+V1 0 -200 -50
+V2 50 -200 50
+V3 0 100 0
+
+Triangle T3 White
+N 0 0.164399 0.986394
+V1 -50 -200 50
+V2 50 -200 50
+V3 0 100 0
+
+End
+
+Begin Light
+
+Point TopLight
+# Intensity , radiance or irradiance Value
+IRV 1.0 1.0 1.0
+# Position
+P 0 273 1028
+
+End
